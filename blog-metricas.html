@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As 3 métricas que todo empresário precisa acompanhar — Kahu Marketing</title>
+  <meta name="description" content="ROAS, CAC e LTV não são exclusividade de grandes empresas. Veja como aplicar esses indicadores no dia a dia do seu negócio e tomar decisões com mais segurança.">
+  <link rel="canonical" href="https://www.kahumarketing.com/blog-metricas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "As 3 métricas que todo empresário precisa acompanhar (e a maioria ignora)",
+    "description": "ROAS, CAC e LTV não são exclusividade de grandes empresas. Veja como aplicar esses indicadores no dia a dia do seu negócio.",
+    "datePublished": "2025-03-10",
+    "dateModified": "2025-03-10",
+    "author": {
+      "@type": "Organization",
+      "name": "Kahu Marketing",
+      "url": "https://www.kahumarketing.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kahu Marketing",
+      "url": "https://www.kahumarketing.com"
+    },
+    "mainEntityOfPage": "https://www.kahumarketing.com/blog-metricas",
+    "keywords": ["ROAS", "CAC", "LTV", "métricas de marketing", "tráfego pago", "gestão de marketing"],
+    "articleSection": "Métricas",
+    "inLanguage": "pt-BR",
+    "timeRequired": "PT6M"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f2ede0; --cream-dark: #e8e1ce;
+      --green: #2f9e44; --green-dark: #1d6e30; --green-forest: #17471f;
+      --green-mint: #8dd4a0; --ink: #1a2a1c; --ink-mid: #3c4a3c;
+      --ink-light: #7a8f7a; --white: #ffffff;
+      --font-head: 'Kufam', sans-serif; --font-body: 'DM Sans', sans-serif;
+      --px: clamp(24px, 5vw, 60px);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--cream); color: var(--ink); line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(242,237,224,.94); backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(26,42,28,.07);
+    }
+    .nav-wrap {
+      max-width: 1240px; margin: 0 auto; padding: 0 var(--px);
+      height: 60px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-cta {
+      background: var(--ink); color: var(--cream);
+      font-size: .84rem; font-weight: 500;
+      padding: 9px 20px; border-radius: 100px; text-decoration: none;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--green-forest); }
+
+    /* ARTICLE LAYOUT */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: calc(60px + clamp(48px, 7vw, 80px)) var(--px) clamp(64px, 9vw, 112px);
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: .78rem; color: var(--ink-light); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--ink-light); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--green); }
+    .breadcrumb span { opacity: .5; }
+
+    /* HEADER */
+    .article-tag {
+      display: inline-block; font-size: .64rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--green-dark); background: rgba(47,158,68,.09);
+      border: 1px solid rgba(47,158,68,.2);
+      padding: 4px 12px; border-radius: 100px; margin-bottom: 20px;
+    }
+    .article-title {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.15; letter-spacing: -.03em;
+      color: var(--ink); margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      font-size: .8rem; color: var(--ink-light);
+      padding-bottom: 32px; border-bottom: 1px solid rgba(26,42,28,.1);
+      margin-bottom: 48px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* BODY */
+    .article-body h2 {
+      font-family: var(--font-head); font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+      font-weight: 700; letter-spacing: -.02em; line-height: 1.25;
+      color: var(--ink); margin: 48px 0 16px;
+    }
+    .article-body h3 {
+      font-family: var(--font-head); font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 700; letter-spacing: -.01em;
+      color: var(--ink); margin: 32px 0 12px;
+    }
+    .article-body p { font-size: clamp(.95rem, 1.3vw, 1.05rem); color: var(--ink-mid); line-height: 1.8; margin-bottom: 20px; }
+    .article-body strong { color: var(--ink); font-weight: 600; }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { font-size: clamp(.95rem, 1.3vw, 1.05rem); color: var(--ink-mid); line-height: 1.8; margin-bottom: 8px; }
+
+    .callout {
+      background: rgba(47,158,68,.07); border-left: 3px solid var(--green);
+      border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 32px 0;
+    }
+    .callout p { margin: 0; color: var(--ink); font-style: italic; }
+
+    .metric-card {
+      background: var(--white); border: 1px solid rgba(26,42,28,.09);
+      border-radius: 14px; padding: 24px 28px; margin: 12px 0;
+    }
+    .metric-card h3 { margin-top: 0; font-size: 1.05rem; }
+    .metric-card .formula {
+      font-family: monospace; font-size: .88rem;
+      background: rgba(26,42,28,.05); border-radius: 6px;
+      padding: 8px 12px; margin: 10px 0; color: var(--ink);
+    }
+
+    /* CTA FINAL */
+    .article-cta {
+      background: var(--ink); border-radius: 20px;
+      padding: clamp(32px, 5vw, 52px); text-align: center;
+      margin-top: 64px;
+    }
+    .article-cta h3 {
+      font-family: var(--font-head); font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      font-weight: 700; color: var(--cream); margin-bottom: 12px;
+    }
+    .article-cta p { color: rgba(242,237,224,.65); font-size: .95rem; margin-bottom: 28px; }
+    .btn-primary {
+      background: var(--green); color: var(--white);
+      font-size: .95rem; font-weight: 600;
+      padding: 14px 32px; border-radius: 100px; text-decoration: none;
+      display: inline-block; transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+    /* BACK LINK */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--ink-light); text-decoration: none; font-size: .88rem;
+      margin-top: 48px; transition: color .2s;
+    }
+    .back-link:hover { color: var(--green); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink); color: rgba(242,237,224,.5);
+      padding: 40px var(--px); text-align: center;
+      border-top: 1px solid rgba(255,255,255,.05);
+      margin-top: 80px;
+    }
+    .footer-brand { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--cream); }
+    .footer-tag { font-size: .82rem; color: rgba(242,237,224,.4); margin-top: 3px; }
+    footer p { font-size: .78rem; margin-top: 12px; }
+
+    @media (max-width: 600px) {
+      .article-meta { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <a class="logo" href="/" aria-label="Kahu Marketing">
+      <svg viewBox="0 0 280 58" fill="none" xmlns="http://www.w3.org/2000/svg" height="34">
+        <path d="M8 56 L8 38 C8 27 13 19 21 14 L20 4 C19 1 23 0 25 2 L29 10 C34 7 40 7 45 10 L49 2 C51 0 55 1 54 5 L51 13 C57 19 60 27 60 38 L60 56 Z" fill="#1a2a1c"/>
+        <rect x="8" y="45" width="44" height="4.5" rx="1" fill="#2f9e44"/>
+        <rect x="8" y="51" width="32" height="3.5" rx="1" fill="#2f9e44"/>
+        <rect x="8" y="56.5" width="20" height="3" rx="1" fill="#2f9e44"/>
+        <circle cx="80" cy="27" r="2.5" fill="#1a2a1c"/>
+        <text x="89" y="38" font-family="Kufam, sans-serif" font-weight="700" font-size="34" fill="#1a2a1c" letter-spacing="-0.5">Kahu</text>
+        <text x="91" y="52" font-family="Kufam, DM Sans, sans-serif" font-weight="500" font-size="9" fill="#1a2a1c" letter-spacing="3">MARKETING</text>
+      </svg>
+    </a>
+    <a class="nav-cta" href="https://wa.me/55" target="_blank" rel="noopener">Conversa de clareza</a>
+  </div>
+</nav>
+
+<main>
+  <article class="article-wrap" itemscope itemtype="https://schema.org/BlogPosting">
+    <meta itemprop="datePublished" content="2025-03-10">
+    <meta itemprop="author" content="Kahu Marketing">
+
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="/">Início</a>
+      <span>›</span>
+      <a href="/#blog">Blog</a>
+      <span>›</span>
+      <span>Métricas</span>
+    </nav>
+
+    <span class="article-tag">Métricas</span>
+    <h1 class="article-title" itemprop="headline">As 3 métricas que todo empresário precisa acompanhar (e a maioria ignora)</h1>
+
+    <div class="article-meta">
+      <span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <time itemprop="datePublished" datetime="2025-03-10">10 de março de 2025</time>
+      </span>
+      <span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6 min de leitura
+      </span>
+      <span>Por Kahu Marketing</span>
+    </div>
+
+    <div class="article-body" itemprop="articleBody">
+
+      <p>A maioria dos empresários que investe em tráfego pago toma decisões com base em uma única pergunta: <strong>"está vendendo?"</strong></p>
+      <p>Quando a resposta é sim, aumentam o orçamento. Quando é não, trocam de agência. E o ciclo se repete.</p>
+      <p>O problema não é a pergunta em si — é que ela é incompleta. "Está vendendo?" não te diz se você está lucrando. Não te diz se o crescimento é sustentável. Não te diz onde está o gargalo real.</p>
+      <p>Existem três métricas que, quando monitoradas juntas, mudam completamente a qualidade das decisões de marketing. Nenhuma delas exige planilha sofisticada. Todas podem ser calculadas hoje, com os dados que você já tem.</p>
+
+      <h2>1. ROAS — Retorno sobre o gasto em anúncios</h2>
+
+      <p>ROAS é a métrica mais usada — e também a mais mal interpretada.</p>
+
+      <div class="metric-card">
+        <h3>Como calcular</h3>
+        <div class="formula">ROAS = Receita gerada pelos anúncios ÷ Gasto com anúncios</div>
+        <p style="margin:8px 0 0; font-size:.88rem; color:var(--ink-mid);">Exemplo: R$12.000 em vendas com R$3.000 investidos = ROAS 4x</p>
+      </div>
+
+      <p>Um ROAS de 4x parece ótimo. Mas depende. Se sua margem de produto é 20%, você precisa de no mínimo 5x só para cobrir o custo da mídia — sem contar frete, impostos, operação e time.</p>
+
+      <p><strong>O número que realmente importa é o ROAS mínimo de equilíbrio do seu negócio.</strong> Calculado assim:</p>
+      <div class="metric-card">
+        <div class="formula">ROAS de equilíbrio = 1 ÷ Margem líquida</div>
+        <p style="margin:8px 0 0; font-size:.88rem; color:var(--ink-mid);">Se sua margem líquida é 25%, seu ROAS mínimo é 4x. Abaixo disso, cada venda dá prejuízo.</p>
+      </div>
+
+      <div class="callout">
+        <p>"Saber o ROAS sem saber a margem é como saber a velocidade sem saber para onde você está indo."</p>
+      </div>
+
+      <h2>2. CAC — Custo de Aquisição de Cliente</h2>
+
+      <p>O CAC diz quanto você gasta, em média, para conquistar um cliente. É a métrica que mais revela ineficiências no funil.</p>
+
+      <div class="metric-card">
+        <h3>Como calcular</h3>
+        <div class="formula">CAC = Total gasto em marketing e vendas ÷ Número de novos clientes</div>
+        <p style="margin:8px 0 0; font-size:.88rem; color:var(--ink-mid);">Inclua tudo: mídia paga, time comercial, ferramentas, agência.</p>
+      </div>
+
+      <p>O CAC sozinho não diz nada. O que importa é a relação entre CAC e ticket médio — e, mais ainda, entre CAC e LTV (que veremos a seguir).</p>
+
+      <p>Um CAC de R$200 pode ser excelente se o ticket médio é R$1.500. E pode ser insustentável se o produto custa R$120.</p>
+
+      <h3>Acompanhe o CAC por canal</h3>
+      <p>Um dos erros mais comuns é calcular o CAC total e achar que está tudo bem. Quando você separa por canal — Meta Ads, Google Ads, indicação, orgânico — geralmente descobre que um ou dois canais subsidiam os outros.</p>
+      <p>Essa análise costuma revelar onde concentrar investimento e onde cortar.</p>
+
+      <h2>3. LTV — Valor do Tempo de Vida do Cliente</h2>
+
+      <p>LTV é quanto um cliente gera de receita para o seu negócio ao longo de todo o relacionamento. É a métrica mais estratégica das três — e a menos monitorada.</p>
+
+      <div class="metric-card">
+        <h3>Versão simplificada</h3>
+        <div class="formula">LTV = Ticket médio × Frequência de compra × Tempo de retenção</div>
+        <p style="margin:8px 0 0; font-size:.88rem; color:var(--ink-mid);">Ex: R$300 × 4 compras/ano × 2 anos = LTV de R$2.400</p>
+      </div>
+
+      <p>Com o LTV em mãos, a decisão sobre quanto gastar para adquirir um cliente muda completamente. Se um cliente vale R$2.400 ao longo do relacionamento, pagar R$400 para adquiri-lo pode ser um excelente negócio — mesmo que pareça caro no curto prazo.</p>
+
+      <div class="callout">
+        <p>"Empresas que conhecem o LTV dos seus clientes crescem com mais confiança. Empresas que não conhecem ficam presas otimizando a campanha errada."</p>
+      </div>
+
+      <h2>Como usar as três métricas juntas</h2>
+
+      <p>A relação fundamental é:</p>
+      <div class="metric-card">
+        <div class="formula">LTV ÷ CAC ≥ 3</div>
+        <p style="margin:8px 0 0; font-size:.88rem; color:var(--ink-mid);">Se o LTV for pelo menos 3x o CAC, o negócio tem margem saudável para crescer com tráfego pago.</p>
+      </div>
+
+      <p>Abaixo de 3x, geralmente há um problema estrutural — no produto, no funil ou na retenção — que escalar vai ampliar, não resolver.</p>
+
+      <h3>O que monitorar mensalmente</h3>
+      <ul>
+        <li>ROAS por campanha × ROAS mínimo de equilíbrio</li>
+        <li>CAC por canal de aquisição</li>
+        <li>LTV por segmento de cliente (se aplicável)</li>
+        <li>Relação LTV/CAC — tendência de melhora ou piora</li>
+      </ul>
+
+      <h2>Por onde começar hoje</h2>
+
+      <p>Se você nunca calculou essas métricas, comece pelas mais simples de levantar:</p>
+      <ol>
+        <li><strong>Margem líquida</strong> — o que sobra depois de todos os custos</li>
+        <li><strong>Ticket médio</strong> e <strong>frequência de compra</strong> dos últimos 12 meses</li>
+        <li><strong>Total gasto em marketing</strong> (mídia + agência + ferramentas) e <strong>novos clientes</strong> no mesmo período</li>
+      </ol>
+
+      <p>Com esses três números você já consegue calcular CAC, LTV básico e ROAS de equilíbrio. É o suficiente para tomar decisões muito melhores do que a maioria está tomando hoje.</p>
+
+      <p>Se quiser fazer isso com apoio — e entender o que os números revelam sobre o seu negócio — é exatamente o que fazemos na conversa de clareza.</p>
+
+    </div>
+
+    <div class="article-cta">
+      <h3>Quer calcular essas métricas para o seu negócio?</h3>
+      <p>Em 30 minutos a gente mapeia os números que mais importam e o que eles estão dizendo sobre onde focar.</p>
+      <a class="btn-primary" href="https://wa.me/55" target="_blank" rel="noopener">Quero uma conversa de clareza</a>
+    </div>
+
+    <a class="back-link" href="/#blog">
+      ← Voltar para todos os artigos
+    </a>
+
+  </article>
+</main>
+
+<footer>
+  <div class="footer-brand">Kahu Marketing</div>
+  <div class="footer-tag">Organização das decisões de crescimento.</div>
+  <p>&copy; 2025 Kahu Marketing. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
