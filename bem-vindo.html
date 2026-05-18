@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bem-vindo à Kahu Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f2ede0;
+  --cream-dark:#e8e1ce;
+  --green:#2f9e44;
+  --green-dark:#1d6e30;
+  --green-forest:#17471f;
+  --green-mint:#8dd4a0;
+  --ink:#1a2a1c;
+  --ink-mid:#3c4a3c;
+  --ink-light:#7a8f7a;
+  --sage:#c4d1bc;
+  --white:#ffffff;
+  --font-head:'Kufam',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.7;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* HEADER */
+.header{background:var(--ink);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--cream);letter-spacing:-.02em}
+.logo span{color:var(--green-mint)}
+.header-right{display:flex;align-items:center;gap:20px}
+.header-label{font-size:.72rem;color:rgba(242,237,224,.4);letter-spacing:.1em;text-transform:uppercase}
+.print-btn{font-family:var(--font-body);font-size:.78rem;font-weight:500;color:var(--cream);background:rgba(242,237,224,.1);border:1px solid rgba(242,237,224,.15);padding:7px 16px;border-radius:6px;cursor:pointer;transition:background .2s;text-decoration:none}
+.print-btn:hover{background:rgba(242,237,224,.18)}
+
+/* HERO */
+.hero{background:var(--ink);padding:64px 40px 56px;text-align:center;border-bottom:3px solid var(--green)}
+.hero-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mint);background:rgba(141,212,160,.12);padding:4px 14px;border-radius:20px;margin-bottom:20px}
+.hero-title{font-family:var(--font-head);font-size:2.6rem;font-weight:700;color:var(--cream);letter-spacing:-.04em;line-height:1.15;margin-bottom:16px}
+.hero-sub{font-size:1rem;color:rgba(242,237,224,.55);max-width:540px;margin:0 auto;line-height:1.65}
+
+/* MAIN */
+.main{max-width:720px;margin:0 auto;padding:56px 40px 80px}
+
+/* SECTION */
+.section{margin-bottom:48px}
+.section-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-dark);margin-bottom:4px}
+.section-title{font-family:var(--font-head);font-size:1.35rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin-bottom:16px;line-height:1.25}
+.section-divider{height:2px;background:linear-gradient(90deg,var(--green) 0%,transparent 100%);margin-bottom:24px;width:48px}
+
+p{font-size:.95rem;color:var(--ink-mid);margin-bottom:14px;line-height:1.75}
+p:last-child{margin-bottom:0}
+
+/* INFO BOX */
+.info{background:rgba(47,158,68,.06);border-left:3px solid var(--green);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+.info p{color:var(--ink);margin:0;font-size:.9rem}
+
+/* PHASES */
+.phases{display:flex;flex-direction:column;gap:0}
+.phase{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--cream-dark);position:relative}
+.phase:last-child{border-bottom:none}
+.phase-left{display:flex;flex-direction:column;align-items:center;gap:0;flex-shrink:0}
+.phase-num{width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--font-head);font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.phase-line{width:2px;background:var(--cream-dark);flex:1;margin:6px 0}
+.phase:last-child .phase-line{display:none}
+.phase-content{padding-top:6px}
+.phase-period{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.phase-name{font-family:var(--font-head);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em}
+.phase-items{list-style:none}
+.phase-items li{font-size:.88rem;color:var(--ink-mid);padding:4px 0;padding-left:16px;position:relative;line-height:1.55}
+.phase-items li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--sage)}
+
+/* TABLE */
+.doc-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:16px 0}
+.doc-table th{text-align:left;padding:10px 16px;background:var(--ink);color:rgba(242,237,224,.7);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.doc-table td{padding:12px 16px;border-bottom:1px solid var(--cream-dark);color:var(--ink-mid);vertical-align:top}
+.doc-table tr:last-child td{border-bottom:none}
+.doc-table td:first-child{font-weight:600;color:var(--ink);width:42%}
+.doc-table tr:hover td{background:rgba(196,209,188,.15)}
+
+/* STEPS */
+.steps{list-style:none;counter-reset:steps}
+.steps li{counter-increment:steps;display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--cream-dark);align-items:flex-start}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(steps);min-width:28px;height:28px;border-radius:6px;background:var(--green-forest);color:var(--cream);font-family:var(--font-head);font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-text{font-size:.9rem;color:var(--ink-mid);line-height:1.6}
+.step-text strong{color:var(--ink);font-weight:600}
+
+/* FOOTER */
+.footer{background:var(--ink);padding:40px;text-align:center}
+.footer-logo{font-family:var(--font-head);font-size:1rem;font-weight:700;color:var(--cream);letter-spacing:-.02em;margin-bottom:8px}
+.footer-logo span{color:var(--green-mint)}
+.footer-text{font-size:.8rem;color:rgba(242,237,224,.35)}
+.footer-url{font-size:.78rem;color:var(--green-mint);margin-top:6px}
+
+@media(max-width:600px){
+  .header{padding:16px 20px}
+  .hero{padding:48px 20px 40px}
+  .hero-title{font-size:1.9rem}
+  .main{padding:36px 20px 60px}
+}
+
+@media print{
+  .header{position:static;background:var(--ink)!important}
+  .print-btn{display:none}
+  .hero{padding:40px 20px}
+  .main{padding:32px 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Kahu<span>.</span></div>
+  <div class="header-right">
+    <span class="header-label">Documento do Cliente</span>
+    <a class="print-btn" onclick="window.print()">Imprimir / PDF</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Bem-vindo</div>
+  <h1 class="hero-title">Início da parceria</h1>
+  <p class="hero-sub">Este documento orienta o que vai acontecer nos próximos meses e como trabalhamos juntos.</p>
+</div>
+
+<main class="main">
+
+  <div class="section">
+    <div class="section-label">Contexto</div>
+    <h2 class="section-title">Você passou por um processo antes de chegar aqui</h2>
+    <div class="section-divider"></div>
+    <p>A Kahu Marketing aceita clientes com quem acredita poder gerar resultado real. Isso não é protocolo — é critério. Antes de fecharmos, analisamos o seu negócio, o seu histórico e os seus objetivos.</p>
+    <p>Este documento existe para alinhar expectativas desde o início. Leia com atenção — o que está aqui determina como trabalhamos.</p>
+    <div class="info">
+      <p><strong>Posição da agência:</strong> não prometemos resultados. Construímos as condições para que eles aconteçam.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Processo</div>
+    <h2 class="section-title">O que acontece a partir de agora</h2>
+    <div class="section-divider"></div>
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-left">
+          <div class="phase-num">1</div>
+          <div class="phase-line"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-period">Semanas 1 e 2</div>
+          <div class="phase-name">Diagnóstico e Estrutura</div>
+          <ul class="phase-items">
+            <li>Levantamento de histórico de anúncios e resultados anteriores</li>
+            <li>Auditoria de contas, pixels e rastreamento</li>
+            <li>Análise do funil atual — do anúncio à conversão</li>
+            <li>Definição de objetivos, métricas e metas de referência</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-left">
+          <div class="phase-num">2</div>
+          <div class="phase-line"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-period">Semanas 3 e 4</div>
+          <div class="phase-name">Configuração e Aprovação</div>
+          <ul class="phase-items">
+            <li>Configuração e validação do rastreamento de conversões</li>
+            <li>Criação ou reorganização das campanhas</li>
+            <li>Aprovação de criativos, textos e segmentações</li>
+            <li>Publicação das primeiras campanhas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-left">
+          <div class="phase-num">3</div>
+          <div class="phase-line"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-period">Mês 2</div>
+          <div class="phase-name">Aprendizado</div>
+          <ul class="phase-items">
+            <li>Período de coleta e análise de dados reais</li>
+            <li>Ajustes táticos com base nos primeiros resultados</li>
+            <li>Identificação de padrões de público e criativos</li>
+            <li>Relatório de aprendizado ao final do período</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-left">
+          <div class="phase-num">4</div>
+          <div class="phase-line"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-period">Mês 3 em diante</div>
+          <div class="phase-name">Otimização e Escala</div>
+          <ul class="phase-items">
+            <li>Decisões baseadas em dados consolidados, não em intuição</li>
+            <li>Testes estruturados com critérios claros de aceite</li>
+            <li>Escalabilidade cautelosa com controle de CPA</li>
+            <li>Relatórios mensais com análise e plano de ação</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Expectativas</div>
+    <h2 class="section-title">O que o marketing pode e não pode fazer</h2>
+    <div class="section-divider"></div>
+    <p>O marketing digital não substitui produto ruim, preço fora de mercado ou atendimento que decepciona o cliente. Ele amplifica o que já existe — para o bem e para o mal.</p>
+    <p>Campanhas novas passam por um período de aprendizado de <strong>4 a 8 semanas</strong>. Durante esse tempo, os algoritmos coletam dados, testamos hipóteses e identificamos o que funciona para o seu negócio específico. Esse processo é necessário e não pode ser encurtado sem comprometer a qualidade dos dados.</p>
+    <div class="info">
+      <p>Decisões de escala são tomadas com base em dados suficientes, não em pressa. Se você está buscando resultado imediato, precisamos conversar antes de avançar.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Funcionamento</div>
+    <h2 class="section-title">Como a agência opera</h2>
+    <div class="section-divider"></div>
+    <table class="doc-table">
+      <tr><th>Item</th><th>Detalhes</th></tr>
+      <tr><td>Reuniões</td><td>Mensais — quinzenais no primeiro mês. Via Google Meet, com pauta enviada 24h antes.</td></tr>
+      <tr><td>Relatórios</td><td>Mensais, com análise e plano de ação. Não enviamos dados brutos sem interpretação.</td></tr>
+      <tr><td>Canal de comunicação</td><td>WhatsApp para alinhamentos rápidos. E-mail para documentos formais e aprovações.</td></tr>
+      <tr><td>Aprovações</td><td>Sempre documentadas e com prazo de 48 horas úteis para retorno.</td></tr>
+      <tr><td>Decisões de campanha</td><td>Comunicadas antes de executadas. Nenhuma mudança estrutural sem alinhamento prévio.</td></tr>
+      <tr><td>Prazo de resposta</td><td>Até 24 horas úteis para mensagens gerais.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Aprovações</div>
+    <h2 class="section-title">Como funciona o fluxo de aprovação</h2>
+    <div class="section-divider"></div>
+    <p>Todo conteúdo — criativos, textos, campanhas e segmentações — passa por aprovação antes de ser publicado. Isso protege você e garante que nada vai ao ar sem o seu conhecimento.</p>
+    <table class="doc-table">
+      <tr><th>Situação</th><th>O que acontece</th></tr>
+      <tr><td>Prazo padrão de aprovação</td><td>48 horas úteis após o envio do material</td></tr>
+      <tr><td>Sem retorno no prazo</td><td>Entendemos como aprovado ou pausamos a entrega — conforme combinado no início</td></tr>
+      <tr><td>Ajuste após aprovação</td><td>Novo prazo de produção é iniciado após o feedback</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Próximos passos</div>
+    <h2 class="section-title">O que você precisa fazer agora</h2>
+    <div class="section-divider"></div>
+    <ol class="steps">
+      <li><div class="step-text"><strong>Enviar os acessos</strong> — Google Ads, Meta Ads, GA4 e demais plataformas. Você receberá um documento com as instruções de como conceder cada acesso.</div></li>
+      <li><div class="step-text"><strong>Preencher o briefing estratégico</strong> — Um formulário com perguntas sobre seu negócio, público e objetivos. Quanto mais completo, mais preciso será o planejamento.</div></li>
+      <li><div class="step-text"><strong>Confirmar a reunião de kick-off</strong> — Primeira reunião de alinhamento. Você receberá o convite com data e link em breve.</div></li>
+      <li><div class="step-text"><strong>Enviar os materiais de marca</strong> — Logotipo, paleta de cores, banco de imagens e qualquer material visual aprovado anteriormente.</div></li>
+    </ol>
+    <div class="info" style="margin-top:24px">
+      <p>Dúvidas? Entre em contato pelo canal de comunicação já definido. Respondemos em até 24 horas úteis.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">Kahu<span>.</span></div>
+  <div class="footer-text">Kahu Marketing — kahuagencia@gmail.com</div>
+  <div class="footer-url">www.kahumarketing.com</div>
+</footer>
+
+</body>
+</html>

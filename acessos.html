@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitação de Acessos — Kahu Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f2ede0;--cream-dark:#e8e1ce;--green:#2f9e44;--green-dark:#1d6e30;
+  --green-forest:#17471f;--green-mint:#8dd4a0;--ink:#1a2a1c;--ink-mid:#3c4a3c;
+  --ink-light:#7a8f7a;--sage:#c4d1bc;--white:#ffffff;
+  --font-head:'Kufam',sans-serif;--font-body:'DM Sans',sans-serif;
+}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.7;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.header{background:var(--ink);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--cream);letter-spacing:-.02em}
+.logo span{color:var(--green-mint)}
+.header-right{display:flex;align-items:center;gap:20px}
+.header-label{font-size:.72rem;color:rgba(242,237,224,.4);letter-spacing:.1em;text-transform:uppercase}
+.print-btn{font-family:var(--font-body);font-size:.78rem;font-weight:500;color:var(--cream);background:rgba(242,237,224,.1);border:1px solid rgba(242,237,224,.15);padding:7px 16px;border-radius:6px;cursor:pointer;transition:background .2s;text-decoration:none}
+.print-btn:hover{background:rgba(242,237,224,.18)}
+.hero{background:var(--ink);padding:64px 40px 56px;text-align:center;border-bottom:3px solid var(--green)}
+.hero-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mint);background:rgba(141,212,160,.12);padding:4px 14px;border-radius:20px;margin-bottom:20px}
+.hero-title{font-family:var(--font-head);font-size:2.6rem;font-weight:700;color:var(--cream);letter-spacing:-.04em;line-height:1.15;margin-bottom:16px}
+.hero-sub{font-size:1rem;color:rgba(242,237,224,.55);max-width:520px;margin:0 auto;line-height:1.65}
+.main{max-width:720px;margin:0 auto;padding:56px 40px 80px}
+.section{margin-bottom:48px}
+.section-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-dark);margin-bottom:4px}
+.section-title{font-family:var(--font-head);font-size:1.35rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin-bottom:16px;line-height:1.25}
+.section-divider{height:2px;background:linear-gradient(90deg,var(--green) 0%,transparent 100%);margin-bottom:24px;width:48px}
+p{font-size:.95rem;color:var(--ink-mid);margin-bottom:14px;line-height:1.75}
+p:last-child{margin-bottom:0}
+.info{background:rgba(47,158,68,.06);border-left:3px solid var(--green);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+.info p{color:var(--ink);margin:0;font-size:.9rem}
+
+/* EMAIL BADGE */
+.email-badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--cream);padding:10px 20px;border-radius:8px;font-family:var(--font-head);font-size:.95rem;font-weight:600;margin:16px 0;letter-spacing:.01em}
+.email-badge span{color:var(--green-mint)}
+
+/* ACCESS CARD */
+.access-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.access-head{background:var(--ink);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.access-icon{font-size:1.1rem}
+.access-platform{font-family:var(--font-head);font-size:.95rem;font-weight:700;color:var(--cream)}
+.access-required{margin-left:auto;font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green-mint);background:rgba(141,212,160,.15);padding:3px 10px;border-radius:4px}
+.access-body{padding:16px 20px}
+.access-row{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--cream-dark);font-size:.88rem;align-items:flex-start}
+.access-row:last-child{border-bottom:none}
+.access-key{font-weight:600;color:var(--ink);min-width:140px;flex-shrink:0}
+.access-val{color:var(--ink-mid);line-height:1.5}
+.access-val code{font-family:monospace;background:rgba(26,42,28,.06);padding:2px 8px;border-radius:4px;font-size:.85rem;color:var(--green-forest)}
+.access-tip{font-size:.8rem;color:var(--ink-light);font-style:italic;margin-top:3px}
+
+/* MATERIALS */
+.material-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.material-item{display:flex;align-items:flex-start;gap:12px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;padding:14px 16px}
+.material-check{width:20px;height:20px;border:2px solid var(--sage);border-radius:4px;flex-shrink:0;margin-top:1px}
+.material-text{font-size:.85rem;color:var(--ink-mid);line-height:1.45}
+.material-text strong{color:var(--ink);display:block;font-size:.88rem;margin-bottom:2px}
+
+.footer{background:var(--ink);padding:40px;text-align:center}
+.footer-logo{font-family:var(--font-head);font-size:1rem;font-weight:700;color:var(--cream);letter-spacing:-.02em;margin-bottom:8px}
+.footer-logo span{color:var(--green-mint)}
+.footer-text{font-size:.8rem;color:rgba(242,237,224,.35)}
+.footer-url{font-size:.78rem;color:var(--green-mint);margin-top:6px}
+
+@media(max-width:600px){
+  .header{padding:16px 20px}.hero{padding:48px 20px 40px}.hero-title{font-size:1.9rem}
+  .main{padding:36px 20px 60px}.material-grid{grid-template-columns:1fr}.access-key{min-width:110px}
+}
+@media print{.header{position:static}.print-btn{display:none}.hero{padding:40px 20px}.main{padding:32px 20px}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Kahu<span>.</span></div>
+  <div class="header-right">
+    <span class="header-label">Documento do Cliente</span>
+    <a class="print-btn" onclick="window.print()">Imprimir / PDF</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Operacional</div>
+  <h1 class="hero-title">Solicitação de acessos</h1>
+  <p class="hero-sub">Instruções para conceder acesso às contas e ferramentas necessárias para iniciarmos o trabalho.</p>
+</div>
+
+<main class="main">
+
+  <div class="section">
+    <div class="section-label">Importante</div>
+    <h2 class="section-title">Como funciona o processo de acesso</h2>
+    <div class="section-divider"></div>
+    <p>Para iniciarmos o trabalho técnico, precisamos de acesso às plataformas listadas abaixo. Todos os acessos são concedidos por <strong>convite dentro de cada plataforma</strong> — não solicitamos senha de nenhuma conta.</p>
+    <p>Adicione o e-mail abaixo como administrador em cada plataforma conforme as instruções:</p>
+    <div class="email-badge">📧 <span>kahuagencia@gmail.com</span></div>
+    <div class="info">
+      <p>Dúvida em alguma plataforma específica? Me avise antes de tentar — é mais rápido do que tentar e errar.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Plataformas de anúncios</div>
+    <h2 class="section-title">Google Ads e Meta Ads</h2>
+    <div class="section-divider"></div>
+
+    <div class="access-card">
+      <div class="access-head">
+        <span class="access-icon">📢</span>
+        <span class="access-platform">Google Ads</span>
+        <span class="access-required">Obrigatório</span>
+      </div>
+      <div class="access-body">
+        <div class="access-row">
+          <span class="access-key">Tipo de acesso</span>
+          <span class="access-val">Administrador</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Como conceder</span>
+          <span class="access-val">Google Ads → Menu superior → Ferramentas → Acesso e segurança → Usuários → Adicionar usuário<div class="access-tip">Ou envie o ID da conta para solicitarmos pelo nosso gerenciador (MCC)</div></span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">E-mail para adicionar</span>
+          <span class="access-val"><code>kahuagencia@gmail.com</code></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="access-card">
+      <div class="access-head">
+        <span class="access-icon">📘</span>
+        <span class="access-platform">Meta Ads (Facebook e Instagram)</span>
+        <span class="access-required">Obrigatório</span>
+      </div>
+      <div class="access-body">
+        <div class="access-row">
+          <span class="access-key">Tipo de acesso</span>
+          <span class="access-val">Administrador da conta de anúncios e da Página</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Como conceder</span>
+          <span class="access-val">Meta Business Suite → Configurações → Usuários → Pessoas → Convidar pessoas<div class="access-tip">Atenção: precisamos de acesso à conta de anúncios, à Página e ao Pixel — os três separadamente</div></span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">E-mail para adicionar</span>
+          <span class="access-val"><code>kahuagencia@gmail.com</code></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Rastreamento e dados</div>
+    <h2 class="section-title">Google Analytics e Tag Manager</h2>
+    <div class="section-divider"></div>
+
+    <div class="access-card">
+      <div class="access-head">
+        <span class="access-icon">📊</span>
+        <span class="access-platform">Google Analytics 4</span>
+        <span class="access-required">Obrigatório</span>
+      </div>
+      <div class="access-body">
+        <div class="access-row">
+          <span class="access-key">Tipo de acesso</span>
+          <span class="access-val">Administrador ou Editor</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Como conceder</span>
+          <span class="access-val">analytics.google.com → Administrador → Propriedade → Gerenciamento de acesso → Adicionar usuário</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">E-mail para adicionar</span>
+          <span class="access-val"><code>kahuagencia@gmail.com</code></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="access-card">
+      <div class="access-head">
+        <span class="access-icon">🏷️</span>
+        <span class="access-platform">Google Tag Manager</span>
+        <span class="access-required">Obrigatório</span>
+      </div>
+      <div class="access-body">
+        <div class="access-row">
+          <span class="access-key">Tipo de acesso</span>
+          <span class="access-val">Publicador (Publisher)</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Como conceder</span>
+          <span class="access-val">tagmanager.google.com → Conta → Permissões de usuário → Adicionar novo usuário</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">E-mail para adicionar</span>
+          <span class="access-val"><code>kahuagencia@gmail.com</code></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Site e CRM</div>
+    <h2 class="section-title">Acesso ao site e ferramentas de gestão</h2>
+    <div class="section-divider"></div>
+
+    <div class="access-card">
+      <div class="access-head">
+        <span class="access-icon">🌐</span>
+        <span class="access-platform">Site / CMS</span>
+        <span class="access-required">Quando aplicável</span>
+      </div>
+      <div class="access-body">
+        <div class="access-row">
+          <span class="access-key">Plataforma</span>
+          <span class="access-val">WordPress / Webflow / Shopify / Outra — informe qual</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Tipo de acesso</span>
+          <span class="access-val">Administrador</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Como conceder</span>
+          <span class="access-val">Convidar <code>kahuagencia@gmail.com</code> como administrador dentro da plataforma — ou enviar credenciais provisórias via mensagem</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="access-card">
+      <div class="access-head">
+        <span class="access-icon">🗂️</span>
+        <span class="access-platform">CRM</span>
+        <span class="access-required">Quando aplicável</span>
+      </div>
+      <div class="access-body">
+        <div class="access-row">
+          <span class="access-key">Plataforma</span>
+          <span class="access-val">RD Station / HubSpot / Kommo / Pipedrive / Outra — informe qual</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Tipo de acesso</span>
+          <span class="access-val">Administrador ou Visualizador — conforme necessidade do projeto</span>
+        </div>
+        <div class="access-row">
+          <span class="access-key">Como conceder</span>
+          <span class="access-val">Convidar o e-mail da agência dentro da plataforma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Identidade visual</div>
+    <h2 class="section-title">Materiais de marca necessários</h2>
+    <div class="section-divider"></div>
+    <p>Além dos acessos digitais, precisamos receber os materiais de identidade visual para uso na criação de anúncios e peças publicitárias.</p>
+    <div class="material-grid">
+      <div class="material-item">
+        <div class="material-check"></div>
+        <div class="material-text"><strong>Logotipo</strong>Versões colorida, branca e preta — preferencialmente em .AI, .EPS, .SVG ou .PNG com fundo transparente</div>
+      </div>
+      <div class="material-item">
+        <div class="material-check"></div>
+        <div class="material-text"><strong>Paleta de cores</strong>Códigos hexadecimais ou Pantone de todas as cores da marca</div>
+      </div>
+      <div class="material-item">
+        <div class="material-check"></div>
+        <div class="material-text"><strong>Tipografia</strong>Nome das fontes utilizadas na marca e onde encontrá-las</div>
+      </div>
+      <div class="material-item">
+        <div class="material-check"></div>
+        <div class="material-text"><strong>Manual de marca</strong>Se existir — PDF ou link de acesso</div>
+      </div>
+      <div class="material-item">
+        <div class="material-check"></div>
+        <div class="material-text"><strong>Banco de imagens</strong>Fotos do produto, serviço, ambiente ou equipe — quanto mais, melhor</div>
+      </div>
+      <div class="material-item">
+        <div class="material-check"></div>
+        <div class="material-text"><strong>Materiais anteriores</strong>Criativos e campanhas já veiculados e aprovados anteriormente</div>
+      </div>
+    </div>
+    <div class="info" style="margin-top:8px">
+      <p>Envie os arquivos via link de Google Drive ou WeTransfer. Arquivos muito grandes não chegam bem por e-mail ou WhatsApp.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">Kahu<span>.</span></div>
+  <div class="footer-text">Kahu Marketing — kahuagencia@gmail.com</div>
+  <div class="footer-url">www.kahumarketing.com</div>
+</footer>
+
+</body>
+</html>

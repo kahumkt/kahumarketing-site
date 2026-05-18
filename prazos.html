@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prazos e Funcionamento — Kahu Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f2ede0;--cream-dark:#e8e1ce;--green:#2f9e44;--green-dark:#1d6e30;
+  --green-forest:#17471f;--green-mint:#8dd4a0;--ink:#1a2a1c;--ink-mid:#3c4a3c;
+  --ink-light:#7a8f7a;--sage:#c4d1bc;--white:#ffffff;
+  --font-head:'Kufam',sans-serif;--font-body:'DM Sans',sans-serif;
+}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.7;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.header{background:var(--ink);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--cream);letter-spacing:-.02em}
+.logo span{color:var(--green-mint)}
+.header-right{display:flex;align-items:center;gap:20px}
+.header-label{font-size:.72rem;color:rgba(242,237,224,.4);letter-spacing:.1em;text-transform:uppercase}
+.print-btn{font-family:var(--font-body);font-size:.78rem;font-weight:500;color:var(--cream);background:rgba(242,237,224,.1);border:1px solid rgba(242,237,224,.15);padding:7px 16px;border-radius:6px;cursor:pointer;transition:background .2s;text-decoration:none}
+.print-btn:hover{background:rgba(242,237,224,.18)}
+.hero{background:var(--ink);padding:64px 40px 56px;text-align:center;border-bottom:3px solid var(--green)}
+.hero-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mint);background:rgba(141,212,160,.12);padding:4px 14px;border-radius:20px;margin-bottom:20px}
+.hero-title{font-family:var(--font-head);font-size:2.6rem;font-weight:700;color:var(--cream);letter-spacing:-.04em;line-height:1.15;margin-bottom:16px}
+.hero-sub{font-size:1rem;color:rgba(242,237,224,.55);max-width:520px;margin:0 auto;line-height:1.65}
+.main{max-width:720px;margin:0 auto;padding:56px 40px 80px}
+.section{margin-bottom:48px}
+.section-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-dark);margin-bottom:4px}
+.section-title{font-family:var(--font-head);font-size:1.35rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin-bottom:16px;line-height:1.25}
+.section-divider{height:2px;background:linear-gradient(90deg,var(--green) 0%,transparent 100%);margin-bottom:24px;width:48px}
+p{font-size:.95rem;color:var(--ink-mid);margin-bottom:14px;line-height:1.75}
+p:last-child{margin-bottom:0}
+.info{background:rgba(47,158,68,.06);border-left:3px solid var(--green);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+.info p{color:var(--ink);margin:0;font-size:.9rem}
+
+/* CARDS DE PRAZO */
+.prazo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.prazo-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:10px;padding:18px 20px}
+.prazo-label{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px}
+.prazo-value{font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--green-dark);line-height:1.2;margin-bottom:4px}
+.prazo-desc{font-size:.82rem;color:var(--ink-mid)}
+
+/* TABLE */
+.doc-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:16px 0}
+.doc-table th{text-align:left;padding:10px 16px;background:var(--ink);color:rgba(242,237,224,.7);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.doc-table td{padding:12px 16px;border-bottom:1px solid var(--cream-dark);color:var(--ink-mid);vertical-align:top}
+.doc-table tr:last-child td{border-bottom:none}
+.doc-table td:first-child{font-weight:600;color:var(--ink);width:38%}
+.doc-table tr:hover td{background:rgba(196,209,188,.15)}
+
+/* CANAL CARD */
+.canal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.canal-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:10px;padding:20px}
+.canal-icon{font-size:1.2rem;margin-bottom:10px}
+.canal-name{font-family:var(--font-head);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+.canal-use{font-size:.82rem;color:var(--ink-mid);line-height:1.5}
+
+/* URGÊNCIA */
+.urgencia-box{background:rgba(26,42,28,.04);border:1px solid var(--cream-dark);border-radius:10px;padding:24px;margin:16px 0}
+.urgencia-title{font-family:var(--font-head);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:10px}
+.urgencia-text{font-size:.88rem;color:var(--ink-mid);line-height:1.65}
+.urgencia-keyword{display:inline-block;background:var(--ink);color:var(--cream);font-family:var(--font-head);font-size:.78rem;font-weight:700;padding:3px 12px;border-radius:4px;letter-spacing:.04em;margin:0 3px}
+
+.footer{background:var(--ink);padding:40px;text-align:center}
+.footer-logo{font-family:var(--font-head);font-size:1rem;font-weight:700;color:var(--cream);letter-spacing:-.02em;margin-bottom:8px}
+.footer-logo span{color:var(--green-mint)}
+.footer-text{font-size:.8rem;color:rgba(242,237,224,.35)}
+.footer-url{font-size:.78rem;color:var(--green-mint);margin-top:6px}
+
+@media(max-width:600px){
+  .header{padding:16px 20px}.hero{padding:48px 20px 40px}.hero-title{font-size:1.9rem}
+  .main{padding:36px 20px 60px}.prazo-grid{grid-template-columns:1fr}.canal-grid{grid-template-columns:1fr}
+}
+@media print{.header{position:static}.print-btn{display:none}.hero{padding:40px 20px}.main{padding:32px 20px}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Kahu<span>.</span></div>
+  <div class="header-right">
+    <span class="header-label">Documento do Cliente</span>
+    <a class="print-btn" onclick="window.print()">Imprimir / PDF</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Operacional</div>
+  <h1 class="hero-title">Prazos e funcionamento</h1>
+  <p class="hero-sub">Como a Kahu Marketing opera, quais são os prazos de cada etapa e como nos comunicamos.</p>
+</div>
+
+<main class="main">
+
+  <div class="section">
+    <div class="section-label">Atendimento</div>
+    <h2 class="section-title">Horários e prazos de resposta</h2>
+    <div class="section-divider"></div>
+    <div class="prazo-grid">
+      <div class="prazo-card">
+        <div class="prazo-label">Atendimento regular</div>
+        <div class="prazo-value">Seg–Sex</div>
+        <div class="prazo-desc">9h às 18h — sábados, domingos e feriados sem atendimento</div>
+      </div>
+      <div class="prazo-card">
+        <div class="prazo-label">Prazo de resposta</div>
+        <div class="prazo-value">24h úteis</div>
+        <div class="prazo-desc">Para demandas gerais e dúvidas — solicitações complexas em até 48h</div>
+      </div>
+    </div>
+    <p>Mensagens recebidas fora do horário de atendimento são respondidas no próximo dia útil, dentro do prazo acima.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Produção</div>
+    <h2 class="section-title">Prazo médio por entregável</h2>
+    <div class="section-divider"></div>
+    <table class="doc-table">
+      <tr><th>Entregável</th><th>Prazo médio</th><th>Condição</th></tr>
+      <tr><td>Criativo / arte</td><td>3 a 5 dias úteis</td><td>A partir do briefing completo</td></tr>
+      <tr><td>Texto (copy)</td><td>2 a 4 dias úteis</td><td>A partir do briefing completo</td></tr>
+      <tr><td>Planejamento estratégico</td><td>5 a 7 dias úteis</td><td>Após kick-off e briefing respondido</td></tr>
+      <tr><td>Configuração de campanhas</td><td>3 a 5 dias úteis</td><td>Após acesso e aprovação do planejamento</td></tr>
+      <tr><td>Relatório mensal</td><td>Até o 5º dia útil</td><td>Referente ao mês anterior</td></tr>
+      <tr><td>Ajuste em campanha ativa</td><td>1 a 2 dias úteis</td><td>Urgências: mesmo dia quando possível</td></tr>
+    </table>
+    <p>Os prazos começam a contar a partir do momento em que recebemos todas as informações ou acessos necessários para iniciar a produção.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Comunicação</div>
+    <h2 class="section-title">Canais e quando usar cada um</h2>
+    <div class="section-divider"></div>
+    <div class="canal-grid">
+      <div class="canal-card">
+        <div class="canal-icon">💬</div>
+        <div class="canal-name">WhatsApp</div>
+        <div class="canal-use">Alinhamentos rápidos, dúvidas pontuais e atualizações de status. Canal principal do dia a dia.</div>
+      </div>
+      <div class="canal-card">
+        <div class="canal-icon">📧</div>
+        <div class="canal-name">E-mail</div>
+        <div class="canal-use">Documentos formais, aprovações, planejamentos e relatórios. Registro oficial da parceria.</div>
+      </div>
+      <div class="canal-card">
+        <div class="canal-icon">📹</div>
+        <div class="canal-name">Google Meet</div>
+        <div class="canal-use">Reuniões estratégicas mensais. Análise de resultados e decisões de grande impacto.</div>
+      </div>
+      <div class="canal-card">
+        <div class="canal-icon">📋</div>
+        <div class="canal-name">Notion</div>
+        <div class="canal-use">Histórico de decisões, relatórios e gestão do projeto. Consulta assíncrona quando necessário.</div>
+      </div>
+    </div>
+    <p style="margin-top:6px;font-size:.82rem;color:var(--ink-light)">Solicitações enviadas por canais não definidos acima (redes sociais pessoais, grupos de terceiros) não estão sujeitas aos prazos informados.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Reuniões</div>
+    <h2 class="section-title">Cadência e formato das reuniões</h2>
+    <div class="section-divider"></div>
+    <table class="doc-table">
+      <tr><th>Item</th><th>Padrão</th></tr>
+      <tr><td>Frequência</td><td>Mensal — quinzenal no primeiro mês de parceria</td></tr>
+      <tr><td>Formato</td><td>Videoconferência via Google Meet</td></tr>
+      <tr><td>Duração média</td><td>60 minutos</td></tr>
+      <tr><td>Pauta</td><td>Enviada 24 horas antes pelo e-mail</td></tr>
+      <tr><td>Ata</td><td>Registrada e enviada em até 48 horas após a reunião</td></tr>
+      <tr><td>Agendamento</td><td>Com pelo menos 48 horas de antecedência</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Urgências</div>
+    <h2 class="section-title">O que é considerado urgência</h2>
+    <div class="section-divider"></div>
+    <div class="urgencia-box">
+      <div class="urgencia-title">Critérios de urgência</div>
+      <div class="urgencia-text">Consideramos urgência apenas situações que impactam diretamente campanhas ativas com potencial de prejuízo imediato: campanha com erro de configuração, produto indisponível com anúncio no ar, conta com restrição inesperada.<br><br>
+      Para sinalizar uma urgência, inicie a mensagem com a palavra <span class="urgencia-keyword">URGENTE</span>. Isso orienta a equipe a priorizar o atendimento no mesmo dia.</div>
+    </div>
+    <p>Demandas que não se enquadram nos critérios acima seguem o fluxo normal de atendimento — mesmo que pareçam urgentes para você.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Aprovações</div>
+    <h2 class="section-title">Como funciona o fluxo de aprovação</h2>
+    <div class="section-divider"></div>
+    <table class="doc-table">
+      <tr><th>Situação</th><th>O que acontece</th></tr>
+      <tr><td>Prazo padrão</td><td>48 horas úteis após o envio do material para revisão</td></tr>
+      <tr><td>Sem retorno no prazo</td><td>Aprovação tácita ou pausa da entrega — combinado no início do projeto</td></tr>
+      <tr><td>Solicitação de ajuste</td><td>Novo prazo de produção começa a contar após o recebimento do feedback</td></tr>
+      <tr><td>Segunda rodada de ajuste</td><td>Incluída no escopo — a partir da terceira, sujeita a avaliação</td></tr>
+    </table>
+    <div class="info" style="margin-top:16px">
+      <p>Toda aprovação é documentada — por e-mail ou mensagem. Isso protege as duas partes e mantém o histórico do projeto organizado.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">Kahu<span>.</span></div>
+  <div class="footer-text">Kahu Marketing — kahuagencia@gmail.com</div>
+  <div class="footer-url">www.kahumarketing.com</div>
+</footer>
+
+</body>
+</html>
